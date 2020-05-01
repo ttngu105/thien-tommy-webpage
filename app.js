@@ -9,7 +9,7 @@ var cookieParser = require('cookie-parser');
 app.use(cookieParser());
 require("./config/passport")(passport);
 const cors = require('cors');
-const port = 3000;
+const port = 4000;
 const bodyParser = require("body-parser");
 const sessionConfig  =   { secret: "secret" ,   
                             resave: false ,   
