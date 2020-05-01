@@ -1,0 +1,47 @@
+body{
+	background-color: rgb(0,27,89);
+}
+.bg-white{
+	background-color: rgb(255,255,255);  
+}
+.bg-blue{
+	background-color: rgb(2,20,61);
+}
+.bg-darkblue{
+	background-color: rgb(0,16,48);
+}
+#background{
+background: rgb(6,2,85);
+background: linear-gradient(90deg, rgba(1,16,48,1) 0%, rgba(5,33,94,1) 50%, rgba(1,16,48,1) 100%);
+}
+.highlight-r{
+background: rgb(6,2,85);
+background: linear-gradient(90deg, rgba(1,16,48,1) 0%, rgba(5,33,94,1) 21%, rgba(1,16,48,1) 100%);
+}
+.highlight-l{
+background: rgb(6,2,85);
+background: linear-gradient(90deg, rgba(1,16,48,1) 0%, rgba(5,33,94,1) 81%, rgba(1,16,48,1) 100%);
+}
+.no-border {
+    border: 0;
+    box-shadow: none; 
+}
+input[type=text] {
+  color: white;
+}
+textarea{
+	color:white;
+}
+.button4 {border-radius: 12px;}
+
+.carousel-inner>.carouselitem>img{width:5%; margin:auto}
+
+.carousel-inner > .carousel-item {
+
+    transition: 0.00000006s ease-in-out left;
+}
+.carousel-item img{
+  object-fit:cover;
+  height:175px !important;
+  width:50000px;
+}

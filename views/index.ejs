@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<head>
+		<title>Thien Tommy's Portfolio</title>
+		<link rel="stylesheet" type="text/css" href="landing-page.css">
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="scripts/news.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+</head>
+<body class="background" id="background">
+	<nav id="topbar" class = " navbar navbar-dark bg-dark fluid">
+			<a href="/"><strong><font color = "white">Thien Tommy Nguyen's Portfolio</font></strong></a>
+			<%if(typeof username != ''){%>
+			<p class="bg-dark" id ="user" ><font color = "white"><%=username%></font></p>
+			<form action="/users/logout" method="POST"><button class="bg-dark" id ="logout" action="/logout"><font color = "white">Logout</font></button></form>
+				<%}%>
+			<%if(typeof username == ''){%>
+			<a class="bg-dark" id ="login" href="/users/login"><font color = "white">Login</font></a>
+			<a class="bg-dark" id ="register" href="/users/register"><font color = "white">Register</font></a>	
+			<%}%>
+		</nav>	
+	<hr>
+		<aside id="sidebar" class='background'>
+			<div>
+				<h1 class="text-center"><font color = "white">Updates</font></h1>
+				<div id="newscarousel" class="carousel slide fluid" data-ride="carousel">
+			  <ol class="carousel-indicators">
+			    <li data-target="#newscarousel" data-slide-to="0" class="active"></li>
+			    <li data-target="#newscarousel" data-slide-to="1"></li>
+			    <li data-target="#newscarousel" data-slide-to="2"></li>
+			    <li data-target="#newscarousel" data-slide-to="3"></li>
+			    <li data-target="#newscarousel" data-slide-to="4"></li>
+			  </ol>
+			<div class="carousel-inner">
+					<div id="news0" class="carousel-item active " >
+						<img class="" src="images/bgnewscarsol.jpg">
+					</div>
+					<div id="news1" class="carousel-item ">
+						<img class="" src="images/bgnewscarsol.jpg">
+					</div>
+					<div id="news2" class="carousel-item ">
+						<img class="" src="images/bgnewscarsol.jpg">
+					</div>
+					<div id="news3" class="carousel-item ">
+						<img class="" src="images/bgnewscarsol.jpg">
+					</div>
+					<div id="news4" class="carousel-item ">
+						<img class="" src="images/bgnewscarsol.jpg">
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#newscarousel" role="button" data-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="carousel-control-next" href="#newscarousel" role="button" data-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+			</aside>
+			<hr>
+		<section id="section-home" class='highlight-r text-center'>
+			<h1><font color = "white"> Welcome</font></h1>
+			<hr>
+			<p><font color = "white">
+				This web page is my digital resumue. It contains all projects I have worked on. 
+			</font></p>
+			</section>
+		<section id="section-about" class='highlight-r text-center'>
+			<hr>
+			<h1><font color = "white"> About </font></h1>
+			<hr>
+			<div>
+				<h4><font color = "white">Thien Tommy Nguyen</font></h4>
+				<p>I<font color = "white">I am currently a juinor at the University Of New Orleans and studying computer science with a focus in Cybersecurity</font></p>
+			</div>
+			<table align="center">
+				<thead>
+					<tr>
+						<th colspan="2"> <font color = "white">Technical Skills</font></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th><font color = "white">Programing tools</font></th>
+						<td><font color = "white">Java, Javascript, Python</font></td>
+					</tr>
+					<tr>
+						<th><font color = "white">Frontend Tools</font></th>
+						<td><font color = "white">HTML, CSS</font></td>
+						
+					</tr>
+					<tr>
+						<th><font color = "white">Database tools</font></th>
+						<td><font color = "white">MongoDB, Mongoose</font></td>
+					</tr>
+					<tr>
+						<th><font color = "white">Version Control & Development Tools</font></th>
+						<td><font color = "white">git, github, gitlab</font></td>
+					</tr>
+					<tr>
+						<th><font color = "white">Architure & Design</font></th>
+						<td><font color = "white">REST</font></td>
+					</tr>
+				</tbody>
+			</table>
+			</section>
+		<section id="section-projects" class='bg-blue text-center'>
+			<h1><font color = "white">Projects</font></h1>
+			<div>
+				<div id="projects" class = 'img-fluid'>
+					<a href="#" target="_blank"></a>
+						<div>
+							<a href = "https://github.com/ttngu105/java"><font color = "white" href = "https://github.com/ttngu105/java">Java</font></a>							
+						</div>
+						<div>
+							<a href = "https://github.com/ttngu105/landing-page/tree/master/scripts"><font color = "white" href = "https://github.com/ttngu105/landing-page/tree/master/scripts">Javascript</font></a>
+						</div>
+						<div><a href = "https://github.com/ttngu105/python"><font color = "white" >Python</font></a></div>
+						<div>
+							<small><font color = "white">by Thien Tommy Nguyen</font></small>
+						</div>
+				</div>	
+			</div>
+			</section>
+		<section id="background" class='bg-blue text-center'>
+			<h1><font color = "white">Blogs</font></h1>
+			<div id="carouselExampleIndicators" class="carousel slide fluid" data-ride="carousel">
+			  <ol class="carousel-indicators">
+			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			  </ol>
+			  <div class="carousel-inner">
+			    <div class="carousel-item active" >	
+			      <a href="/blogs/coding"><img class="img-fluid" src="images/codeimage4.jpg" class="container-fluid" alt="first slide">
+			      <div class="carousel-caption text-center p-100" id="codingblog-txt"><font color = white><strong><h1>Coding blog</h1></strong></font></div>
+			      <div id="codingblog"></div>
+			    </div>
+			    <div class="carousel-item">
+			      <a href="/blogs/crypto"><img  class="img-fluid" src="images/cryptography.jpg" class="container-fluid" alt="...">
+			      	<div class="carousel-caption text-center p-100" id="cryptoblog-txt"><font color = white><strong><h1>Cryptography blog</h1></strong></font></div>
+			      	<div id="cryptographyblog"></div>
+			    </div>
+			    <div class="carousel-item">
+			      <a href="/blogs/digital"><img class="img-fluid"  src="images/digital_forenesics.jpg" class="container-fluid" alt="...">
+			      	<div class="carousel-caption text-center p-100"><font color = white><strong><h1>Digital Forensics blog</h1></strong></font></div>
+					<div id="digitalforensicsblog"></div>
+			    </div>
+			  </div>
+			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+
+			<hr>
+			</section>
+		<section id="section-contact" class='bg-blue text-center'>
+			<h1><font color = "white">Contact</font></h1>
+			<hr>
+			<h4><font color = "white">Send Message</font></h4>
+			<div id= "contact-form">
+				<div>
+					<input class='container fluid bg-darkblue no-border ' type="text" id="name" placeholder="Your Name">
+				</div>
+				<div>
+					<input class="container fluid bg-darkblue no-border" type="text" id="email" placeholder="Your Email">
+				</div>
+				<div>
+					<input class="container fluid bg-darkblue no-border" type="text" id="subject" placeholder="Subject">
+				</div>
+				<div>
+					<textarea class="container fluid bg-darkblue no-border" rows="4" id="message" placeholder="Message"></textarea>
+				</div>
+				<button class="bg-darkblue no-border button4" id="submit"><font color="white"> Submit</font></button>
+			</div>
+		</section>
+		<footer class='bg-darkblue'>
+			<div>
+				<p><font color="white"> Copyright & copy; 2020 Thien Tommy Nguyen</font></p>
+			</div>
+		</footer>
+		<script src="scripts\form-model.js"></script>
+		<script src="scripts\form-controller.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script type="scripts\text.js"></script>
+</body>
+
+
