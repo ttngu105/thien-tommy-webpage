@@ -16,6 +16,7 @@ const sessionConfig  =   { secret: "secret" ,
                             saveUninitialized: true,
                             cookie:{},
                         }; 
+const User = require('./models/User');
 app.use (session( sessionConfig ) ) 
 app.use(express.static(__dirname + '/scripts'));
 app.use(express.static(__dirname + '/images'));
@@ -34,8 +35,6 @@ mongoose.connection.on('disconnected', function(){console.log('i have disconnect
 //body parser
 app.use(express.urlencoded({extended:false}))
 //Express session
-
-
 //passport
 app.use(passport.initialize());
 app.use(passport.session());
@@ -46,11 +45,11 @@ app.use((request,response,next)=>{
     response.locals.success_msg = request.flash('success_msg');
     response.locals.error_msg = request.flash('error_msg');
     response.locals.error = request.flash('error');
-    response.locals.username = username;
+    response.locals.username = insession[request.session.id];
     next();
 });
 //routes
-app.use('/users',require("./routes/users"),(request,response)=>{response.cookie('session',request.session.id).send('cookie set')})
+app.use('/users',require("./routes/users"))
 app.use(layout)
 app.use(express.static(__dirname));
 app.set('view engine',"ejs")

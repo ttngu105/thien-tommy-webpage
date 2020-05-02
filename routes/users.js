@@ -5,12 +5,10 @@ const User = require('../models/User');
 const passport = require('passport');
 const cors = require('cors');
 const {checkisauthenticated,checkisnotauthenticated} = require("../config/auth")
-username = "";
 router.use(cors());
+router.get("/login",checkisnotauthenticated,(request,response)=> {response.render("login")});
 
-router.get("/login",checkisnotauthenticated,(request,response)=> {console.log (request.session.id); response.render("login")});
-
-router.get("/register",checkisnotauthenticated,(request,response)=> {console.log (request.session.id); response.render("register")});
+router.get("/register",checkisnotauthenticated,(request,response)=> {response.render("register")});
 
 router.post("/register",(request,response)=>{
     const {email,username, password, password2} = request.body;
@@ -95,12 +93,14 @@ router.post('/login',passport.authenticate('local',{
   failureFlash: true 
 }),
 (request,response,next)=>{
+  let errors = []
   const session = request.session.id
   User.findOne({username:request.body.username},function(error,user){
-            user.sessionid  = session;
-            user.save();
-            username = user.username;
+    user.sessionid  = session;
+    user.save();
+    insession[user.sessionid] = user.username;
     response.redirect('/')
+
   })
 })
 router.post('/logout',checkisauthenticated,

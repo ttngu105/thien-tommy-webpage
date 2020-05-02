@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const path = require("path")
-//router.use('/codingblog',(request,response)=>{console.log (request.session.id); response.sendFile(path.join(__dirname,"../blogs/codingblog.html"))})
-//router.use('/cyberblog',(request,response)=>{console.log (request.session.id); response.sendFile(path.join(__dirname,"../blogs/cryptoblog.html"))})
-//router.use('/digitalforensicsblog',(request,response)=>{console.log (request.session.id); response.sendFile(path.join(__dirname,"../blogs/digitalblog.html"))})
-router.use('/coding',(request,response)=>{console.log(request.session.id),response.render("coding")})
-router.use('/crypto',(request,response)=>{console.log(request.session.id),response.render("crypto")})
-router.use('/digital',(request,response)=>{console.log(request.session.id),response.render("digital")})
+const {isthisuser} = require('../config/auth')
+router.use('/coding',isthisuser,(request,response)=>{response.render("coding")})
+router.use('/crypto',isthisuser,(request,response)=>{response.render("crypto")})
+router.use('/digital',isthisuser,(request,response)=>{cresponse.render("digital")})
 module.exports = router;
