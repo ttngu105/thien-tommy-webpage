@@ -5,7 +5,7 @@
 	"author": "Thien Tommy Nguyen",
 	"main": "apps.js",
 	"scripts": {
-		"start": "npm install node app"
+		"start": "node app.js"
 	},
 	"dependencies": {
 		"app": "^0.1.0",
