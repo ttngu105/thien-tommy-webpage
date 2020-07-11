@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const path = require("path")
-const {isthisuser} = require('../config/auth')
-router.use('/coding',isthisuser,(request,response)=>{response.render("coding")})
-router.use('/crypto',isthisuser,(request,response)=>{response.render("crypto")})
-router.use('/digital',isthisuser,(request,response)=>{cresponse.render("digital")})
+const path = require("path");
+const webpage = "";
+const {checkisauthenticated,isthisuser} = require("../config/auth")
+router.use('/coding',checkisauthenticated,isthisuser,(request,response)=>{response.render("coding")})
+router.use('/crypto',checkisauthenticated,isthisuser,(request,response)=>{response.render("crypto")})
+router.use('/digital',checkisauthenticated,isthisuser,(request,response)=>{response.render("digital")})
 module.exports = router;

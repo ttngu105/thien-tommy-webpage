@@ -100,11 +100,10 @@ router.post('/login',passport.authenticate('local',{
     user.save();
     insession[user.sessionid] = user.username;
     response.redirect('/')
-
   })
 })
 router.post('/logout',checkisauthenticated,
-(request,response)=>{request.logOut(); response.redirect('/users/login')})
+(request,response)=>{request.logOut(); response.redirect('/')})
 
 
 module.exports = router;

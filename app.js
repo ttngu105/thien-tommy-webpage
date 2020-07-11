@@ -9,7 +9,7 @@ var cookieParser = require('cookie-parser');
 app.use(cookieParser());
 require("./config/passport")(passport);
 const cors = require('cors');
-const port = process.env.PORT;
+const port = 4000;//process.env.PORT;
 const bodyParser = require("body-parser");
 const sessionConfig  =   { secret: "secret" ,   
                             resave: false ,   
@@ -62,6 +62,5 @@ app.use(bodyParser.urlencoded({extended:false}));
 //function Index(request,response){
 	//response.sendFile("index.html");
 //}
-
-app.listen(port);
 console.log(`Server is running on port ${port}..................`);
+app.listen(port);
