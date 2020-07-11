@@ -89,7 +89,7 @@ const getuser = function(username){
 }
 //login handler
 router.post('/login',passport.authenticate('local',{
-  failureRedirect: '/users/login',
+  failureRedirect: '~/users/login',
   failureFlash: true 
 }),
 (request,response,next)=>{

@@ -11,7 +11,7 @@ exports.checkisauthenticated  = function(request,response,next){
 }
 exports.checkisnotauthenticated  = function(request,response,next){
     if (request.isAuthenticated()){
-        response.redirect('/users/login')
+        response.redirect('/')
     }
     return next();
 }
