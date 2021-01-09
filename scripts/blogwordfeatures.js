@@ -1,6 +1,4 @@
 const coding = document.getElementById("codingblog-txt")
-const crypto = document.getElementById("cryptoblog-txt")
-const digitalforensics = document.getElementById("digitalforensicsblog")
 
 coding.addEventListener('mouseenter',codingtxt())
 
