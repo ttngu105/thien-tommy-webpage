@@ -4,6 +4,4 @@ const path = require("path");
 const webpage = "";
 const {checkisauthenticated,isthisuser} = require("../config/auth")
 router.use('/coding',checkisauthenticated,isthisuser,(request,response)=>{response.render("coding")})
-router.use('/crypto',checkisauthenticated,isthisuser,(request,response)=>{response.render("crypto")})
-router.use('/digital',checkisauthenticated,isthisuser,(request,response)=>{response.render("digital")})
 module.exports = router;
