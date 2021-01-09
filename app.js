@@ -63,4 +63,4 @@ app.use(bodyParser.urlencoded({extended:false}));
 	//response.sendFile("index.html");
 //}
 console.log(`Server is running on port ${port}..................`);
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT);
