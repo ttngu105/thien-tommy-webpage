@@ -22,7 +22,7 @@ var responseEventGET= async function(response){
 
 var responseEventPOST = async function(data){
 	var count  = 0
-	for(i =0; i <= 6; i++){
+	for(i =0; i <= 3; i++){
 		const payloads = data[i]
 		var {type} = payloads
 		var {payload} = payloads
